@@ -14,8 +14,6 @@ covidIta <- read.csv("https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/
 covidIta <- covidIta[, c(1, 9, 11, 14)]
 covidIta$data <- as.Date(covidIta$data)
 
-
-# Define server logic required to draw a histogram
 shinyServer(function(input, output) {
 
     output$barPlot <- renderPlot({
